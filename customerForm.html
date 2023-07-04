@@ -1,0 +1,31 @@
+<html>
+    <script src="https://deloittecom-6b5-dev-ed.develop.my.site.com/customerFormSsp/lightning/lightning.out.js"></script>
+    <div data-lightning-out="true"></div>
+    <script>
+
+        const appName = 'c:cusFor';
+        const componentName = 'c:customerForm';
+        const lightningEndpoint = 'https://deloittecom-6b5-dev-ed.develop.my.site.com/customerFormSsp';
+        const targetElement = document.querySelector("[data-lightning-out]");
+        const componentAttributes = {
+    
+        };
+    
+        $Lightning.use(
+                appName,
+                function (){
+                  $Lightning.createComponent(
+                          componentName,
+                          componentAttributes,
+                          targetElement,
+                          function (cmp){
+                            console.log('lightning component created');
+                          }
+                  );
+                },
+                lightningEndpoint
+        );
+    
+    
+      </script>
+</html>
